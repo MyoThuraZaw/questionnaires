@@ -12,6 +12,10 @@
 		E363206022F4EA1800A33173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E363205E22F4EA1800A33173 /* Main.storyboard */; };
 		E363206222F4EA1900A33173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E363206122F4EA1900A33173 /* Assets.xcassets */; };
 		E363206522F4EA1900A33173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E363206322F4EA1900A33173 /* LaunchScreen.storyboard */; };
+		E363206D22F4EED200A33173 /* question1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363206C22F4EED200A33173 /* question1.swift */; };
+		E363206F22F4EEDA00A33173 /* question2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363206E22F4EEDA00A33173 /* question2.swift */; };
+		E363207122F4EEE000A33173 /* question3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363207022F4EEE000A33173 /* question3.swift */; };
+		E363207322F50C6500A33173 /* summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363207222F50C6500A33173 /* summary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E363206122F4EA1900A33173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E363206422F4EA1900A33173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E363206622F4EA1900A33173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E363206C22F4EED200A33173 /* question1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question1.swift; sourceTree = "<group>"; };
+		E363206E22F4EEDA00A33173 /* question2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question2.swift; sourceTree = "<group>"; };
+		E363207022F4EEE000A33173 /* question3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question3.swift; sourceTree = "<group>"; };
+		E363207222F50C6500A33173 /* summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = summary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				E363205A22F4EA1800A33173 /* AppDelegate.swift */,
 				E363205C22F4EA1800A33173 /* ViewController.swift */,
 				E363205E22F4EA1800A33173 /* Main.storyboard */,
+				E363207222F50C6500A33173 /* summary.swift */,
+				E363206C22F4EED200A33173 /* question1.swift */,
+				E363206E22F4EEDA00A33173 /* question2.swift */,
+				E363207022F4EEE000A33173 /* question3.swift */,
 				E363206122F4EA1900A33173 /* Assets.xcassets */,
 				E363206322F4EA1900A33173 /* LaunchScreen.storyboard */,
 				E363206622F4EA1900A33173 /* Info.plist */,
@@ -135,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E363207122F4EEE000A33173 /* question3.swift in Sources */,
+				E363206F22F4EEDA00A33173 /* question2.swift in Sources */,
+				E363207322F50C6500A33173 /* summary.swift in Sources */,
 				E363205D22F4EA1800A33173 /* ViewController.swift in Sources */,
+				E363206D22F4EED200A33173 /* question1.swift in Sources */,
 				E363205B22F4EA1800A33173 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +298,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KV3N527G8;
 				INFOPLIST_FILE = questionnaires/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myothurazaw.questionnaires;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KV3N527G8;
 				INFOPLIST_FILE = questionnaires/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myothurazaw.questionnaires;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
