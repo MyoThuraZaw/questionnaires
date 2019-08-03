@@ -29,11 +29,29 @@ class Question3: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
 
         switch questionType {
         case "general":
-            data = ["question": "GQ3", "option1": "GO1", "option2": "GO2", "option3": "GO3", "answer": "GO2"]
+            data = [
+                "question": "Choose the planet which is not in the solar system.",
+                "option1": "Uranus",
+                "option2": "Pluto",
+                "option3": "Rigel",
+                "answer": "Rigel"
+            ]
         case "programming":
-            data = ["question": "PQ3", "option1": "PO1", "option2": "PO2", "option3": "PO3", "answer": "PO2"]
+            data = [
+                "question": "Which framework is used to build Visual Studio Code?",
+                "option1": "Angular",
+                "option2": "Electron",
+                "option3": "Bootstrap",
+                "answer": "Electron"
+            ]
         case "celebrity":
-            data = ["question": "CQ3", "option1": "CO1", "option2": "CO2", "option3": "CO3", "answer": "CO2"]
+            data = [
+                "question": "Whos is the main actor in Harry Potter?",
+                "option1": "Matthew Lewis",
+                "option2": "Daniel Radcliffe",
+                "option3": "Johnny Depp",
+                "answer": "Daniel Radcliffe"
+            ]
         default:
             data = ["": ""]
         }

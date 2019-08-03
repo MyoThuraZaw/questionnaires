@@ -29,11 +29,29 @@ class Question1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
 
         switch questionType {
         case "general":
-            data = ["question": "GQ1", "option1": "GO1", "option2": "GO2", "option3": "GO3", "answer": "GO2"]
+            data = [
+                "question": "Where is Canada located?",
+                "option1": "Asia",
+                "option2": "North America",
+                "option3": "Europe",
+                "answer": "North America"
+            ]
         case "programming":
-            data = ["question": "PQ1", "option1": "PO1", "option2": "PO2", "option3": "PO3", "answer": "PO2"]
+            data = [
+                "question": "Which programming language is the most widely used in 2019?",
+                "option1": "Swift",
+                "option2": "Python",
+                "option3": "JavaScript",
+                "answer": "JavaScript"
+            ]
         case "celebrity":
-            data = ["question": "CQ1", "option1": "CO1", "option2": "CO2", "option3": "CO3", "answer": "CO2"]
+            data = [
+                "question": "Who is the highest paid Hollywood actor in 2019?",
+                "option1": "Chris Hemsworth",
+                "option2": "Dwayne Johnson",
+                "option3": "Brad Pitt",
+                "answer": "Dwayne Johnson"
+            ]
         default:
             data = ["": ""]
         }
