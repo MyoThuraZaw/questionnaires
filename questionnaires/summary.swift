@@ -11,9 +11,14 @@ import UIKit
 class Summary: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
-   
+    @IBOutlet weak var tryAgainButton: UIButton!
+    @IBOutlet weak var backToHomeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tryAgainButton.layer.cornerRadius = 10.0
+        backToHomeButton.layer.cornerRadius = 10.0
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         

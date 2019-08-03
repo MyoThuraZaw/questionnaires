@@ -39,12 +39,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initialSetup()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc = segue.destination as? Question1
         vc?.questionType = data
+        
+    }
+    
+    func initialSetup() {
+        let buttonRadius: CGFloat = 10.0
+        generalQuestionsButton.layer.cornerRadius = buttonRadius
+        programmingQuestionsButton.layer.cornerRadius = buttonRadius
+        CelebrityQuestionsButton.layer.cornerRadius = buttonRadius
         
     }
     

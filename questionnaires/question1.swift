@@ -26,6 +26,9 @@ class Question1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.layer.cornerRadius = 10.0
+//        questionLabel.frame.size = questionLabel.intrinsicContentSize
 
         switch questionType {
         case "general":
