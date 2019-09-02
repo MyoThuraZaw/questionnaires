@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var data: String = ""
+    var questionType: String = ""
 
     @IBOutlet weak var generalQuestionsButton: UIButton!
     
@@ -23,16 +23,24 @@ class ViewController: UIViewController {
         
         switch sender.tag {
         case 1:
-            data = "general"
+            questionType = "general"
         case 2:
-            data = "programming"
+            questionType = "programming"
         case 3:
-            data = "celebrity"
+            questionType = "celebrity"
         default:
             print("No action")
         }
         
-        performSegue(withIdentifier: "question1segue", sender: self)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nextQuestionVC = storyBoard.instantiateViewController(withIdentifier: "qtype") as! Question1
+        
+        nextQuestionVC.setup(type: questionType)
+        
+        present(nextQuestionVC, animated: true, completion: nil)
+       
+       // performSegue(withIdentifier: "question1segue", sender: self)
         
     }
 
@@ -43,12 +51,11 @@ class ViewController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let vc = segue.destination as? Question1
-        vc?.questionType = data
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        let vc = segue.destination as? Question1
+//        vc?.questionType = questionType
+//    }
     
     func initialSetup() {
         let buttonRadius: CGFloat = 10.0

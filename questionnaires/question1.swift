@@ -24,36 +24,47 @@ class Question1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pickerViewAnswer: UIPickerView!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let gQuestions = GeneralQuestionsBank()
+    let pQuestions = ProgrammingQuestionsBank()
+    let cQuestions = CelebrityQuestionsBank()
+    
+    func setup(type:String ){
+        questionType = type 
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nextButton.layer.cornerRadius = 10.0
-//        questionLabel.frame.size = questionLabel.intrinsicContentSize
 
         switch questionType {
         case "general":
+            let index = gQuestions.generalQuestions[appDelegate.questionIndex]
             data = [
-                "question": "Where is Canada located?",
-                "option1": "Asia",
-                "option2": "North America",
-                "option3": "Europe",
-                "answer": "North America"
+                "question": index.question,
+                "option1": index.option1,
+                "option2": index.option2,
+                "option3": index.option3,
+                "answer": index.answer
             ]
         case "programming":
+            let index = pQuestions.programmingQuestions[appDelegate.questionIndex]
             data = [
-                "question": "Which programming language is the most widely used in 2019?",
-                "option1": "Swift",
-                "option2": "Python",
-                "option3": "JavaScript",
-                "answer": "JavaScript"
+                "question": index.question,
+                "option1": index.option1,
+                "option2": index.option2,
+                "option3": index.option3,
+                "answer": index.answer
             ]
         case "celebrity":
+            let index = cQuestions.celebrityQuestions[appDelegate.questionIndex]
             data = [
-                "question": "Who is the highest paid Hollywood actor in 2019?",
-                "option1": "Chris Hemsworth",
-                "option2": "Dwayne Johnson",
-                "option3": "Brad Pitt",
-                "answer": "Dwayne Johnson"
+                "question": index.question,
+                "option1": index.option1,
+                "option2": index.option2,
+                "option3": index.option3,
+                "answer": index.answer
             ]
         default:
             data = ["": ""]
@@ -93,16 +104,32 @@ class Question1: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         if userChoice == hiddenAnswer {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            
             appDelegate.totalScore += 1
         }
-
-        performSegue(withIdentifier: "question2segue", sender: self)
+        
+        appDelegate.questionIndex += 1
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if (appDelegate.questionIndex < gQuestions.generalQuestions.count) {
+            
+            let nextQuestionVC = storyBoard.instantiateViewController(withIdentifier: "qtype") as! Question1
+            nextQuestionVC.setup(type: questionType)
+            present(nextQuestionVC, animated: true, completion: nil)
+            
+        } else {
+            let summaryVC = storyBoard.instantiateViewController(withIdentifier: "summary") as! Summary
+            
+            present(summaryVC, animated: true, completion: nil)
+        }
+        
+        //performSegue(withIdentifier: "question2segue", sender: self)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        let vc = segue.destination as? Question2
-        vc?.questionType = questionType
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        let vc = segue.destination as? Question2
+//        vc?.questionType = questionType
+//    }
 }

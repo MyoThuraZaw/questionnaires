@@ -75,7 +75,7 @@
         <!--Question1-->
         <scene sceneID="7h3-bF-LGU">
             <objects>
-                <viewController id="DVD-ux-BqL" customClass="Question1" customModule="questionnaires" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="qtype" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DVD-ux-BqL" customClass="Question1" customModule="questionnaires" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eOG-IO-BHk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,7 +338,7 @@
         <!--Summary-->
         <scene sceneID="No8-BH-Xel">
             <objects>
-                <viewController id="ob4-QI-grc" customClass="Summary" customModule="questionnaires" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="summary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ob4-QI-grc" customClass="Summary" customModule="questionnaires" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I8L-zh-ox5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
