@@ -27,6 +27,8 @@ class Summary: UIViewController {
     
     @IBAction func tryAgainButtonPressed(_ sender: UIButton) {
         resetTotalScores()
+//        print(navigationController?.viewControllers.count)
+//        print(navigationController?.viewControllers)
         
         if let viewControllers = navigationController?.viewControllers{
             for vc in viewControllers {
@@ -39,6 +41,8 @@ class Summary: UIViewController {
     }
     
     @IBAction func backToHomeButtonPressed(_ sender: UIButton) {
+//        print(navigationController?.viewControllers.count)
+//        print(navigationController?.viewControllers)
         resetTotalScores()
         navigationController?.popToRootViewController(animated: true)
     }
@@ -46,5 +50,6 @@ class Summary: UIViewController {
     func resetTotalScores() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.totalScore = 0
+        appDelegate.questionIndex = 0
     }
 }

@@ -75,6 +75,7 @@ class Question3: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate 
 
         userChoice = optionsArray[0]
     }
+    
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
